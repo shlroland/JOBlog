@@ -3,26 +3,30 @@
 @tailwind utilities;
 
 @layer utilities {
-    .border-color-light {
-        @apply border-gray-200
-    }
+  .border-color-light {
+    @apply border-gray-200;
+  }
 
-    .text-primary-color {
-        @apply text-zinc-800
-    }
+  .text-primary-color {
+    @apply text-zinc-800;
+  }
 
-    .h-header {
-        height: 64px;
-    }
+  .text-second-color {
+    @apply text-zinc-600;
+  }
+
+  .h-header {
+    height: 64px;
+  }
 }
 
 @layer components {
-    .layout {
-        @apply mr-auto ml-auto w-full pr-4 pl-4 md:w-[768px] md:p-0
-        lg:w-[960px] lg:p-0 xl:w-[1180px] xl:p-0
-    }
+  .layout {
+    @apply mr-auto ml-auto w-full pr-4 pl-4 md:w-[768px] md:p-0
+        lg:w-[960px] lg:p-0 xl:w-[1180px] xl:p-0;
+  }
 }
 
 body {
-    @apply text-zinc-800 bg-slate-200
+  @apply bg-slate-200 text-zinc-800 text-sm;
 }

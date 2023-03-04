@@ -26,5 +26,8 @@ module.exports = {
       },
     ],
     "@typescript-eslint/no-var-requires": ["error"],
+    "@typescript-eslint/no-explicit-any": ["warn",{
+      ignoreRestArgs: true
+    }]
   },
 };
