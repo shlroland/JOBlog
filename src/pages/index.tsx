@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import Link from "next/link";
-import { DoubleColumnLayout } from "./components/layouts/DoubleColumnLayout";
+import { DoubleColumnLayout } from "./components/Layouts/DoubleColumnLayout";
 import { ArticleRecommend, Tags } from "./components/recommends";
 
 const Home: NextPage = () => {
