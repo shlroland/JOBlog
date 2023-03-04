@@ -1,5 +1,5 @@
 import { type FCWithChildren } from "react";
-import { Header } from "../header";
+import { Header } from "../Header";
 
 export const Applayout: FCWithChildren = ({ children }) => {
   return (
