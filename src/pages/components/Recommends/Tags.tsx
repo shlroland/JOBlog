@@ -4,7 +4,7 @@ import Link from "next/link";
 export const Tags = () => {
   return (
     <div className="mb-5 rounded-sm bg-white leading-tight shadow-sm">
-      <div className="text-primary-color border-color-light border border-solid p-4 font-bold">
+      <div className="text-primary-color border-color-light border-b border-solid p-4 font-bold">
         <span>文章标签</span>
       </div>
 

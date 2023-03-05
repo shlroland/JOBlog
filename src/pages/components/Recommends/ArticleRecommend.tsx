@@ -4,7 +4,7 @@ import { LocaleTime } from "../LocaleTime";
 export const ArticleRecommend = () => {
   return (
     <div className="mb-5 overflow-hidden rounded-sm bg-white leading-tight shadow-sm">
-      <div className="text-primary-color border-color-light border border-solid p-4 font-bold">
+      <div className="text-primary-color border-color-light border-b border-solid p-4 font-bold">
         <span>推荐文章</span>
       </div>
 
@@ -18,7 +18,7 @@ export const ArticleRecommend = () => {
               数据可视化
             </span>
             {" · "}
-            <span>
+            <span  className="hover:text-inherit">
               <LocaleTime date={"2023-01-01 08:00:00"} timeago={true} />
             </span>
           </Link>

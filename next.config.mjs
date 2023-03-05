@@ -20,5 +20,12 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    remotePatterns: [
+      {
+        hostname: "dummyimage.com",
+      },
+    ],
+  },
 };
 export default config;

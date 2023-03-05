@@ -55,7 +55,7 @@ export const Header: FC<HeaderProps> = ({ hasBg }) => {
       >
         <div className="layout">
           <div
-            className={`h-header mr-16 inline-flex items-center text-left leading-none`}
+            className={`h-header mr-14 inline-flex items-center text-left leading-none`}
           >
             <Link href="/" scroll={false} aria-label="home">
               <GiRoundStar className="text-4xl text-[#684380]" />
