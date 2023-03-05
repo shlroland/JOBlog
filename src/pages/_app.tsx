@@ -6,7 +6,7 @@ import "modern-css-reset";
 import { api } from "~/utils/api";
 
 import "~/styles/globals.css";
-import { Applayout } from "./components/Layouts/Applayput";
+import { Applayout } from "../components/Layouts/Applayput";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
