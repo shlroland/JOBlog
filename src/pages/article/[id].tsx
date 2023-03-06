@@ -5,7 +5,8 @@ import { LocaleTime } from "~/components/LocaleTime";
 import Link from "next/link";
 import { AiOutlineTag } from "react-icons/ai";
 
-const Article: NextPage = () => {
+const Article: NextPage<{ article: string }> = ({article}) => {
+  console.log(article)
   return (
     <DoubleColumnLayout>
       <article className="rounded-sm bg-white p-4 shadow-sm">
@@ -46,7 +47,7 @@ const Article: NextPage = () => {
 
         <div className="-mx-2 text-xs">
           <div className="inline-block px-2">
-            <div className="text-second-color border-color-light mt-2 inline-flex items-center rounded border border-solid bg-white px-2 text-sm leading-7 hover:bg-primary-500 hover:border-primary-500 hover:text-white [&_svg]:inline">
+            <div className="text-second-color border-color-light mt-2 inline-flex items-center rounded border border-solid bg-white px-2 text-sm leading-7 hover:border-primary-500 hover:bg-primary-500 hover:text-white [&_svg]:inline">
               <Link href={"/"}>
                 <AiOutlineTag />
                 <span className="ml-2">富文本</span>
