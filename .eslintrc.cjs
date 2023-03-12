@@ -1,33 +1,24 @@
 /** @type {import("eslint").Linter.Config} */
-module.exports = {
-  overrides: [
-    {
-      extends: [
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-      ],
-      files: ["*.ts", "*.tsx"],
-      parserOptions: {
-        project: "tsconfig.json",
-      },
-    },
-  ],
+const config = {
+  root: true,
+  extends: ["roland"], // uses the config in `packages/config/eslint`
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: "./tsconfig.json",
-  },
-  plugins: ["@typescript-eslint"],
-  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
-  rules: {
-    "@typescript-eslint/consistent-type-imports": [
-      "warn",
-      {
-        prefer: "type-imports",
-        fixStyle: "inline-type-imports",
-      },
+    ecmaVersion: "latest",
+    tsconfigRootDir: __dirname,
+    project: [
+      "./tsconfig.json",
+      "./packages/*/tsconfig.json",
     ],
-    "@typescript-eslint/no-var-requires": ["error"],
-    "@typescript-eslint/no-explicit-any": ["warn",{
-      ignoreRestArgs: true
-    }]
   },
+  settings: {
+    next: {
+      rootDir: ["packages/nextjs"],
+    },
+  },
+  rules: {
+    "@typescript-eslint/no-unsafe-assignment": 'off'
+  }
 };
+
+module.exports = config;

@@ -1,0 +1,6 @@
+packages:
+ - packages/blog
+ - packages/server
+ - packages/db
+ - packages/config/*
+ - packages/auth

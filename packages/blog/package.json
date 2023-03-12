@@ -1,0 +1,47 @@
+{
+  "name": "@roland/blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "clean": "git clean -xdf .next .turbo node_modules",
+    "dev": "next dev",
+    "lint": "SKIP_ENV_VALIDATION=1 next lint",
+    "lint:fix": "pnpm lint --fix",
+    "start": "next start",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@roland/auth": "*",
+    "@roland/db": "*",
+    "@roland/tailwindcss-config": "*",
+    "@roland/server": "*",
+    "@tanstack/react-query": "^4.24.10",
+    "@trpc/client": "^10.14.0",
+    "@trpc/next": "^10.14.0",
+    "@trpc/react-query": "^10.14.0",
+    "@trpc/server": "^10.14.0",
+    "ahooks": "^3.7.4",
+    "classnames": "^2.3.2",
+    "date-fns": "^2.29.3",
+    "modern-css-reset": "^1.4.0",
+    "next": "13.1.6",
+    "next-auth": "^4.19.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "remark": "^14.0.2",
+    "superjson": "1.9.1",
+    "zod": "^3.20.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.9",
+    "postcss": "^8.4.14",
+    "sass": "^1.58.3",
+    "tailwindcss": "^3.2.0",
+    "typescript": "^4.9.4"
+  }
+}
