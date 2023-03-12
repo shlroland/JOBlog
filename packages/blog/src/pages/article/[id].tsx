@@ -1,12 +1,11 @@
 import { type NextPage } from "next";
-import { DoubleColumnLayout } from "packages/blog/src/components/Layouts/DoubleColumnLayout";
 import Image from "next/image";
-import { LocaleTime } from "packages/blog/src/components/LocaleTime";
 import Link from "next/link";
 import { AiOutlineTag } from "react-icons/ai";
+import { DoubleColumnLayout } from "~/components/Layouts/DoubleColumnLayout";
+// import { LocaleTime } from "~/components/LocaleTime";
 
-const Article: NextPage<{ article: string }> = ({article}) => {
-  console.log(article)
+const Article: NextPage<{ article: string }> = () => {
   return (
     <DoubleColumnLayout>
       <article className="rounded-sm bg-white p-4 shadow-sm">
@@ -25,7 +24,7 @@ const Article: NextPage<{ article: string }> = ({article}) => {
           </h1>
           <p className="text-second-color mb-5 italic">
             <span>
-              发布于 <LocaleTime date={new Date()} />
+              {/* 发布于 <LocaleTime date={new Date()} /> */}
             </span>
             <span> · </span>
             <span>阅读量 250</span>
@@ -34,7 +33,7 @@ const Article: NextPage<{ article: string }> = ({article}) => {
 
         <div className="text-second-color border-color-light mt-7 border-t border-dashed py-5 leading-7">
           <div className="mb-5 text-center text-xs leading-[22px] text-neutral-500">
-            发布于 <LocaleTime date={new Date()} /> | 版权信息{" "}
+            {/* 发布于 <LocaleTime date={new Date()} /> | 版权信息{" "} */}
             <a
               href="https://creativecommons.org/licenses/by-nc/3.0/cn/deed.zh"
               target="_blank"
