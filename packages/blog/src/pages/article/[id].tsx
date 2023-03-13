@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineTag } from "react-icons/ai";
 import { DoubleColumnLayout } from "~/components/Layouts/DoubleColumnLayout";
-// import { LocaleTime } from "~/components/LocaleTime";
+import { LocaleTime } from "~/components/LocaleTime";
 
 const Article: NextPage<{ article: string }> = () => {
   return (
@@ -22,9 +22,9 @@ const Article: NextPage<{ article: string }> = () => {
           <h1 className="mt-2.5 text-4xl font-bold leading-normal">
             富文本编辑器
           </h1>
-          <p className="text-second-color mb-5 italic">
+          <p className="text-second-color mb-5 italic leading-loose">
             <span>
-              {/* 发布于 <LocaleTime date={new Date()} /> */}
+              发布于 <LocaleTime date={'2023-03-13 22:00:00'} />
             </span>
             <span> · </span>
             <span>阅读量 250</span>
@@ -33,7 +33,7 @@ const Article: NextPage<{ article: string }> = () => {
 
         <div className="text-second-color border-color-light mt-7 border-t border-dashed py-5 leading-7">
           <div className="mb-5 text-center text-xs leading-[22px] text-neutral-500">
-            {/* 发布于 <LocaleTime date={new Date()} /> | 版权信息{" "} */}
+            发布于 <LocaleTime date={'2023-03-13 22:00:00'} /> | 版权信息{" "}
             <a
               href="https://creativecommons.org/licenses/by-nc/3.0/cn/deed.zh"
               target="_blank"
