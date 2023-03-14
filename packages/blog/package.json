@@ -14,6 +14,7 @@
   "dependencies": {
     "@roland/auth": "*",
     "@roland/db": "*",
+    "@roland/env": "*",
     "@roland/server": "*",
     "@roland/tailwindcss-config": "*",
     "@tanstack/react-query": "^4.24.10",

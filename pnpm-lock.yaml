@@ -57,6 +57,7 @@ importers:
     specifiers:
       '@roland/auth': '*'
       '@roland/db': '*'
+      '@roland/env': '*'
       '@roland/server': '*'
       '@roland/tailwindcss-config': '*'
       '@tailwindcss/line-clamp': ^0.4.2
@@ -87,6 +88,7 @@ importers:
     dependencies:
       '@roland/auth': link:../auth
       '@roland/db': link:../db
+      '@roland/env': link:../env
       '@roland/server': link:../server
       '@roland/tailwindcss-config': link:../config/tailwindcss
       '@tanstack/react-query': 4.24.10_biqbaboplfbrettd7655fr4n2y
@@ -172,6 +174,12 @@ importers:
       '@types/node': 18.14.0
       prisma: 4.11.0
       typescript: 4.9.5
+
+  packages/env:
+    specifiers:
+      zod: ^3.20.6
+    dependencies:
+      zod: 3.20.6
 
   packages/server:
     specifiers:

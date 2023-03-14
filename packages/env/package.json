@@ -1,0 +1,10 @@
+{
+  "name": "@roland/env",
+  "version": "0.0.0",
+  "main": "env.mjs",
+  "types": "env.d.ts",
+  "license": "MIT",
+  "dependencies": {
+    "zod": "^3.20.6"
+  }
+}
