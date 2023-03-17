@@ -5,3 +5,4 @@ packages:
  - packages/config/*
  - packages/auth
  - packages/env
+ - packages/admin

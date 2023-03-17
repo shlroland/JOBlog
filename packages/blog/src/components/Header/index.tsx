@@ -1,17 +1,18 @@
-import cx from "classnames";
-import { useMemo, type FC } from "react";
-import Link from "next/link";
-import { GiRoundStar } from "react-icons/gi";
+import { useMemo, type FC } from "react"
+import Link from "next/link"
+import { useBoolean } from "ahooks"
+import cx from "classnames"
+import { GiRoundStar } from "react-icons/gi"
 import {
-  MdOutlineLightMode,
   MdOutlineGTranslate,
+  MdOutlineLightMode,
   MdOutlineSearch,
-} from "react-icons/md";
-import styles from "./index.module.css";
-import { useBoolean } from "ahooks";
+} from "react-icons/md"
+
+import styles from "./index.module.css"
 
 interface HeaderProps {
-  hasBg?: boolean;
+  hasBg?: boolean
 }
 
 const NAV_LINKS = [
@@ -23,10 +24,10 @@ const NAV_LINKS = [
     path: "/archives",
     locale: "归档",
   },
-];
+]
 
 export const Header: FC<HeaderProps> = ({ hasBg }) => {
-  const [visible, { toggle }] = useBoolean(false);
+  const [visible, { toggle }] = useBoolean(false)
 
   const navMenu = useMemo(
     () =>
@@ -37,8 +38,8 @@ export const Header: FC<HeaderProps> = ({ hasBg }) => {
           </Link>
         </li>
       )),
-    []
-  );
+    [],
+  )
 
   return (
     <header
@@ -74,7 +75,7 @@ export const Header: FC<HeaderProps> = ({ hasBg }) => {
             <div className={styles.stick}></div>
           </div>
 
-          <nav className={cx([styles.nav,visible && styles.active])}>
+          <nav className={cx([styles.nav, visible && styles.active])}>
             <ul>
               {navMenu}
               <li className={styles.toolWrapper}>
@@ -91,5 +92,5 @@ export const Header: FC<HeaderProps> = ({ hasBg }) => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}

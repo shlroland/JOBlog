@@ -1,5 +1,6 @@
-import Link from "next/link";
-import { LocaleTime } from "../LocaleTime";
+import Link from "next/link"
+
+import { LocaleTime } from "../LocaleTime"
 
 export const ArticleRecommend = () => {
   return (
@@ -12,18 +13,18 @@ export const ArticleRecommend = () => {
         <li className="text-second-color flex flex-nowrap items-stretch pt-4">
           <Link
             href="/"
-            className="truncate hover:text-primary-500 [&:hover>span:first-of-type]:text-primary-500"
+            className="hover:text-primary-500 [&:hover>span:first-of-type]:text-primary-500 truncate"
           >
             <span className="text-primary-color hover:text-inherit">
               数据可视化
             </span>
             {" · "}
-            <span  className="hover:text-inherit">
+            <span className="hover:text-inherit">
               <LocaleTime date={"2023-01-01 08:00:00"} timeago={true} />
             </span>
           </Link>
         </li>
       </ul>
     </div>
-  );
-};
+  )
+}

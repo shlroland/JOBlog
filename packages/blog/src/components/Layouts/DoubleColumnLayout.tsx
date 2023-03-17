@@ -1,12 +1,12 @@
-import { type ReactNode, type FCWithChildren } from "react";
-import cx from "classnames";
+import { type FCWithChildren, type ReactNode } from "react"
+import cx from "classnames"
 
 export interface DoubleColumnLayoutProps {
-  minHeight?: string | number;
-  leftClassname?: string;
-  leftNode?: ReactNode;
-  rightNode?: ReactNode;
-  isRightNodeMobileHidden?: boolean;
+  minHeight?: string | number
+  leftClassname?: string
+  leftNode?: ReactNode
+  rightNode?: ReactNode
+  isRightNodeMobileHidden?: boolean
 }
 
 export const DoubleColumnLayout: FCWithChildren<DoubleColumnLayoutProps> = ({
@@ -17,14 +17,13 @@ export const DoubleColumnLayout: FCWithChildren<DoubleColumnLayoutProps> = ({
   rightNode,
   isRightNodeMobileHidden = true,
 }) => {
-
   return (
     <div style={{ minHeight }}>
       <div className="layout">
         <div className="flex flex-wrap justify-center">
           <section
             className={cx([
-              "md:w-[calc(100%-20rem-1rem)] w-full md:grow pt-4 md:pb-4",
+              "w-full pt-4 md:w-[calc(100%-20rem-1rem)] md:grow md:pb-4",
               leftClassname,
             ])}
           >
@@ -33,8 +32,8 @@ export const DoubleColumnLayout: FCWithChildren<DoubleColumnLayoutProps> = ({
           <aside
             className={cx([
               isRightNodeMobileHidden && "hidden w-0",
-              "ml-0 md:ml-4 md:w-72 md:pt-4 md:pb-4 md:block",
-              '[&>.sticky]:w-72'
+              "ml-0 md:ml-4 md:block md:w-72 md:pt-4 md:pb-4",
+              "[&>.sticky]:w-72",
             ])}
           >
             {rightNode}
@@ -42,5 +41,5 @@ export const DoubleColumnLayout: FCWithChildren<DoubleColumnLayoutProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

@@ -6,10 +6,7 @@ const config = {
   parserOptions: {
     ecmaVersion: "latest",
     tsconfigRootDir: __dirname,
-    project: [
-      "./tsconfig.json",
-      "./packages/*/tsconfig.json",
-    ],
+    project: ["./tsconfig.json", "./packages/*/tsconfig.json"],
   },
   settings: {
     next: {
@@ -17,8 +14,9 @@ const config = {
     },
   },
   rules: {
-    "@typescript-eslint/no-unsafe-assignment": 'off'
-  }
-};
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+}
 
-module.exports = config;
+module.exports = config

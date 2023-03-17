@@ -1,11 +1,11 @@
 {
-    "name": "@roland/tailwindcss-config",
-    "version": "0.0.0",
-    "main": "index.js",
-    "license": "MIT",
-    "devDependencies": {
-        "autoprefixer": "^10.4.13",
-        "postcss": "^8.4.21",
-        "tailwindcss": "^3.2.7"
-    }
+  "name": "@roland/tailwindcss-config",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
+  }
 }

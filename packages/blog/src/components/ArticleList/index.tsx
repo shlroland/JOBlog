@@ -1,10 +1,11 @@
-import cx from "classnames";
-import Link from "next/link";
-import Image from "next/image";
-import { Divider } from "../Divider";
-import { LocaleTime } from "../LocaleTime";
-import { HiOutlineHeart, HiOutlineEye } from "react-icons/hi";
-import { BsDot } from "react-icons/bs";
+import Image from "next/image"
+import Link from "next/link"
+import cx from "classnames"
+import { BsDot } from "react-icons/bs"
+import { HiOutlineEye, HiOutlineHeart } from "react-icons/hi"
+
+import { Divider } from "../Divider"
+import { LocaleTime } from "../LocaleTime"
 
 export const ArticleList = () => {
   return (
@@ -16,7 +17,7 @@ export const ArticleList = () => {
             className={cx(
               "[&+div]:mt-8",
               "relative after:absolute after:-bottom-4 after:left-0 after:h-[1px] after:w-full after:bg-gray-200",
-              "last-of-type:after:h-0"
+              "last-of-type:after:h-0",
             )}
           >
             <Link href={"/"}>
@@ -35,7 +36,7 @@ export const ArticleList = () => {
               </header>
               <main className="flex flex-nowrap pt-3">
                 <div className="flex shrink grow basis-auto flex-col justify-between">
-                  <div className="text-primary-color flex max-w-full text-sm line-clamp-3">
+                  <div className="text-primary-color line-clamp-3 flex max-w-full text-sm">
                     一个理想的富文本编辑器产生结构化的、语义化的、有意义的文档的同时还要能够让用户能够容易的理解与使用。ProseMirror
                     试着在Markdown 编辑体验和传统的WYSIWYG 编辑
                   </div>
@@ -53,7 +54,7 @@ export const ArticleList = () => {
                     </span>
                   </div>
                 </div>
-                <div className="min-h-28 relative max-h-[112px] min-h-[96px] w-32 grow-0 shrink-0 basis-auto overflow-hidden rounded">
+                <div className="min-h-28 relative max-h-[112px] min-h-[96px] w-32 shrink-0 grow-0 basis-auto overflow-hidden rounded">
                   <Image
                     src="https://dummyimage.com/1200x800/556e64/fff"
                     alt="fff"
@@ -65,8 +66,8 @@ export const ArticleList = () => {
               </main>
             </Link>
           </div>
-        );
+        )
       })}
     </div>
-  );
-};
+  )
+}

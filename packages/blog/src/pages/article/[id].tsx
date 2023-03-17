@@ -1,9 +1,10 @@
-import { type NextPage } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { AiOutlineTag } from "react-icons/ai";
-import { DoubleColumnLayout } from "~/components/Layouts/DoubleColumnLayout";
-import { LocaleTime } from "~/components/LocaleTime";
+import { type NextPage } from "next"
+import Image from "next/image"
+import Link from "next/link"
+import { AiOutlineTag } from "react-icons/ai"
+
+import { DoubleColumnLayout } from "~/components/Layouts/DoubleColumnLayout"
+import { LocaleTime } from "~/components/LocaleTime"
 
 const Article: NextPage<{ article: string }> = () => {
   return (
@@ -24,7 +25,7 @@ const Article: NextPage<{ article: string }> = () => {
           </h1>
           <p className="text-second-color mb-5 italic leading-loose">
             <span>
-              发布于 <LocaleTime date={'2023-03-13 22:00:00'} />
+              发布于 <LocaleTime date={"2023-03-13 22:00:00"} />
             </span>
             <span> · </span>
             <span>阅读量 250</span>
@@ -33,7 +34,7 @@ const Article: NextPage<{ article: string }> = () => {
 
         <div className="text-second-color border-color-light mt-7 border-t border-dashed py-5 leading-7">
           <div className="mb-5 text-center text-xs leading-[22px] text-neutral-500">
-            发布于 <LocaleTime date={'2023-03-13 22:00:00'} /> | 版权信息{" "}
+            发布于 <LocaleTime date={"2023-03-13 22:00:00"} /> | 版权信息{" "}
             <a
               href="https://creativecommons.org/licenses/by-nc/3.0/cn/deed.zh"
               target="_blank"
@@ -46,7 +47,7 @@ const Article: NextPage<{ article: string }> = () => {
 
         <div className="-mx-2 text-xs">
           <div className="inline-block px-2">
-            <div className="text-second-color border-color-light mt-2 inline-flex items-center rounded border border-solid bg-white px-2 text-sm leading-7 hover:border-primary-500 hover:bg-primary-500 hover:text-white [&_svg]:inline">
+            <div className="text-second-color border-color-light hover:border-primary-500 hover:bg-primary-500 mt-2 inline-flex items-center rounded border border-solid bg-white px-2 text-sm leading-7 hover:text-white [&_svg]:inline">
               <Link href={"/"}>
                 <AiOutlineTag />
                 <span className="ml-2">富文本</span>
@@ -56,7 +57,7 @@ const Article: NextPage<{ article: string }> = () => {
         </div>
       </article>
     </DoubleColumnLayout>
-  );
-};
+  )
+}
 
-export default Article;
+export default Article

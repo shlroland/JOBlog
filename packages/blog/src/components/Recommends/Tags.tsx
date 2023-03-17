@@ -1,5 +1,5 @@
-import cx from "classnames";
-import Link from "next/link";
+import Link from "next/link"
+import cx from "classnames"
 
 export const Tags = () => {
   return (
@@ -12,7 +12,7 @@ export const Tags = () => {
         <li
           className={cx(
             "text-second-color border-color border-color-light mr-2 mb-2 inline-block rounded-sm border border-solid py-0.5 px-2 leading-6 transition-all",
-            "hover:border-primary-500 hover:text-primary-500"
+            "hover:border-primary-500 hover:text-primary-500",
           )}
         >
           <Link href={"/"}>
@@ -21,5 +21,5 @@ export const Tags = () => {
         </li>
       </ul>
     </div>
-  );
-};
+  )
+}
