@@ -7,6 +7,7 @@ import { AiOutlineTag } from "react-icons/ai"
 import { DoubleColumnLayout } from "~/components/Layouts/DoubleColumnLayout"
 import { LocaleTime } from "~/components/LocaleTime"
 import { MarkdownRender } from "~/components/MarkdownRender"
+import Refractor from "~/components/Refractor"
 // import { api } from "~/utils/api"
 import md from "./Youdao_Note_Markdown_Template.md"
 
@@ -23,6 +24,10 @@ const Article: NextPage<{ article: string }> = () => {
           href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"
           integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC"
           crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-dark.min.css"
         />
       </Head>
       <article className="rounded-sm bg-white p-4 shadow-sm">
@@ -72,6 +77,7 @@ const Article: NextPage<{ article: string }> = () => {
           </div>
         </div>
       </article>
+      <Refractor language="js" value="sadfasdfasdfasdf"></Refractor>
     </DoubleColumnLayout>
   )
 }
