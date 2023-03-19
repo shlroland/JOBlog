@@ -1,14 +1,30 @@
 import { type NextPage } from "next"
+import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import { AiOutlineTag } from "react-icons/ai"
 
 import { DoubleColumnLayout } from "~/components/Layouts/DoubleColumnLayout"
 import { LocaleTime } from "~/components/LocaleTime"
+import { MarkdownRender } from "~/components/MarkdownRender"
+// import { api } from "~/utils/api"
+import md from "./Youdao_Note_Markdown_Template.md"
 
 const Article: NextPage<{ article: string }> = () => {
+  // const article = api.example.getArticle.useQuery()
+
+  // console.log(md)
+
   return (
     <DoubleColumnLayout>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"
+          integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC"
+          crossOrigin="anonymous"
+        />
+      </Head>
       <article className="rounded-sm bg-white p-4 shadow-sm">
         <div className="w-full">
           <Image
@@ -31,7 +47,7 @@ const Article: NextPage<{ article: string }> = () => {
             <span>阅读量 250</span>
           </p>
         </div>
-
+        <MarkdownRender content={md} />
         <div className="text-second-color border-color-light mt-7 border-t border-dashed py-5 leading-7">
           <div className="mb-5 text-center text-xs leading-[22px] text-neutral-500">
             发布于 <LocaleTime date={"2023-03-13 22:00:00"} /> | 版权信息{" "}

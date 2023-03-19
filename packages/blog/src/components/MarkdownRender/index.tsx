@@ -1,11 +1,17 @@
-import { useRef, type FC } from "react"
+import { type FC } from "react"
+import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm"
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
 
-export const MarkdownRender: FC<{ content: string }> = ({}) => {
-  const ref = useRef<HTMLDivElement>(null)
+export const MarkdownRender: FC<{ content: string }> = ({ content }) => {
   return (
-    <div
-      ref={ref}
-      className="markdownRender prose prose-slate lg:prose-lg"
-    ></div>
+    <ReactMarkdown
+      className="markdownRender prose prose-neutral lg:prose-lg max-w-none"
+      remarkPlugins={[remarkGfm,remarkMath]}
+      rehypePlugins={[rehypeKatex]}
+    >
+      {content}
+    </ReactMarkdown>
   )
 }
