@@ -2,6 +2,8 @@
 
 This almost class-less CSS library turns your HTML document into a website that looks like a LaTeX document.
 
+## Table of contents
+
 
 ## Usage
 

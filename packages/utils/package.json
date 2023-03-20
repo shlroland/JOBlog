@@ -1,0 +1,18 @@
+{
+  "name": "@roland/utils",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "github-slugger": "^2.0.0",
+    "hast": "^1.0.0",
+    "hast-util-has-property": "^2.0.1",
+    "hast-util-heading-rank": "^2.1.1",
+    "hast-util-to-string": "^2.0.0",
+    "unified": "^10.1.2",
+    "unist-util-visit": "^4.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

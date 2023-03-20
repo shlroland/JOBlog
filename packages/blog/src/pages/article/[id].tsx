@@ -7,7 +7,6 @@ import { AiOutlineTag } from "react-icons/ai"
 import { DoubleColumnLayout } from "~/components/Layouts/DoubleColumnLayout"
 import { LocaleTime } from "~/components/LocaleTime"
 import { MarkdownRender } from "~/components/MarkdownRender"
-import Refractor from "~/components/Refractor"
 // import { api } from "~/utils/api"
 import md from "./Youdao_Note_Markdown_Template.md"
 
@@ -77,7 +76,6 @@ const Article: NextPage<{ article: string }> = () => {
           </div>
         </div>
       </article>
-      <Refractor language="js" value="sadfasdfasdfasdf"></Refractor>
     </DoubleColumnLayout>
   )
 }

@@ -6,3 +6,4 @@ packages:
  - packages/auth
  - packages/env
  - packages/admin
+ - packages/utils

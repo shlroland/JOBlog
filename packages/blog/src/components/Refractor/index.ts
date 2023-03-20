@@ -20,8 +20,6 @@ const Refractor: FC<Props> = ({ value, language, classNmae }) => {
       : tree.children.map(mapWithDepth(0))
   }, [])
 
-  console.log(value, code)
-
   return h("code", { className: cx(classNmae, `language-${language}`) }, code)
 }
 

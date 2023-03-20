@@ -17,6 +17,7 @@
     "@roland/env": "*",
     "@roland/server": "*",
     "@roland/tailwindcss-config": "*",
+    "@roland/utils": "*",
     "@tanstack/react-query": "^4.24.10",
     "@trpc/client": "^10.14.0",
     "@trpc/next": "^10.14.0",
@@ -41,7 +42,6 @@
     "zod": "^3.20.6"
   },
   "devDependencies": {
-    "@mdx-js/loader": "^2.3.0",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.9",
     "@types/react": "^18.0.26",
