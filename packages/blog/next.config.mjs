@@ -9,7 +9,12 @@
 /** @type {import("next").NextConfig} */
 const config = {
   /** Enables hot reloading for local packages without a build step */
-  transpilePackages: ["@roland/server", "@roland/auth", "@roland/db"],
+  transpilePackages: [
+    "@roland/server",
+    "@roland/auth",
+    "@roland/db",
+    "@roland/utils",
+  ],
   /** We already do linting and typechecking as separate tasks in CI */
   eslint: { ignoreDuringBuilds: !!process.env.CI },
   typescript: { ignoreBuildErrors: !!process.env.CI },
@@ -23,7 +28,7 @@ const config = {
   webpack: function (config) {
     config.module.rules.push({
       test: /\.md$/,
-      type: 'asset/source',
+      type: "asset/source",
     })
     return config
   },

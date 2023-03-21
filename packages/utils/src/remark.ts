@@ -18,12 +18,16 @@ export const rehypeSlug: (getHeadings: GetHeadings) => () => Transformer =
           const nodeContent = toString(node)
           node.properties.id = slugs.slug(toString(node))
 
-          headings.push({ ...node, headingContent: nodeContent })
+          headings.push({
+            ...node,
+            headingContent: nodeContent,
+            id: node.properties.id,
+          })
         }
       })
       getHeadings(headings)
     }
   }
 
-export type HeadingElement = Element & { headingContent: string }
+export type HeadingElement = Element & { headingContent: string; id: string }
 export type GetHeadings = (headings: HeadingElement[]) => void

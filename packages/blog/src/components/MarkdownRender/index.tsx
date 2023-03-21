@@ -5,17 +5,20 @@ import rehypeKatex from "rehype-katex"
 import remarkGfm from "remark-gfm"
 import remarkMath from "remark-math"
 
-import { rehypeSlug } from "@roland/utils"
+import { rehypeSlug, type GetHeadings } from "@roland/utils"
 
 import Refractor from "../Refractor"
 
-export const MarkdownRender: FC<{ content: string }> = ({ content }) => {
-  const getHeadings = useMemoizedFn((headings: any) => {
-    console.log(headings)
+export const MarkdownRender: FC<{
+  content: string
+  onTocsChange: GetHeadings
+}> = ({ content, onTocsChange }) => {
+  const getHeadings = useMemoizedFn<GetHeadings>((headings) => {
+    setTimeout(() => onTocsChange(headings), 0)
   })
   return (
     <ReactMarkdown
-      className="markdownRender prose prose-neutral lg:prose-lg max-w-none"
+      className="markdownRender prose prose-zinc lg:prose-lg max-w-none"
       remarkPlugins={[remarkGfm, remarkMath]}
       rehypePlugins={[rehypeKatex, rehypeSlug(getHeadings)]}
       components={{

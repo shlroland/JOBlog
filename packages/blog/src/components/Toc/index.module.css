@@ -1,0 +1,10 @@
+.item {
+  &::before {
+    @apply absolute top-1/2 -mt-0.5 bg-current rounded-[50%];
+    content: '';
+    left: var(--dot-left);
+    width: var(--dot-width);
+    height: var(--dot-width);
+    margin-top: -2px;
+  }
+}
