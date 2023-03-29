@@ -20,7 +20,7 @@
     "@roland/utils": "*",
     "@tanstack/react-query": "^4.24.10",
     "@trpc/client": "^10.14.0",
-    "@trpc/next": "^10.14.0",
+    "@trpc/next": "^10.14.1",
     "@trpc/react-query": "^10.14.0",
     "@trpc/server": "^10.14.0",
     "ahooks": "^3.7.4",

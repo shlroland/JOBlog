@@ -32,7 +32,7 @@ There are two options for this plugin, `footnotes` and `syntax`, they can be ena
 module.exports = {
 	//...
 	theme: {
-		latex: {
+        latex: {
 			footnotes: true,
 			syntax: true,
 		},

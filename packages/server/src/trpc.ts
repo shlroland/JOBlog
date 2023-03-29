@@ -14,6 +14,8 @@ import { ZodError } from "zod"
 import { getServerSession, type Session } from "@roland/auth"
 import { prisma } from "@roland/db"
 
+import { notion } from "./utils/notion"
+
 /**
  * 1. CONTEXT
  *
@@ -40,6 +42,7 @@ const createInnerTRPCContext = (opts: CreateContextOptions) => {
   return {
     session: opts.session,
     prisma,
+    notion,
   }
 }
 

@@ -6,5 +6,7 @@ declare module "@roland/env" {
     NEXTAUTH_URL: string
     DISCORD_CLIENT_ID: string
     DISCORD_CLIENT_SECRET: string
+    NOTION_KEY: string
+    NOTION_DATABASE: string
   }
 }

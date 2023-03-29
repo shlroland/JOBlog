@@ -42,6 +42,8 @@
     "SKIP_ENV_VALIDATION",
     "VERCEL",
     "VERCEL_URL",
-    "PORT"
+    "PORT",
+    "NOTION_KEY",
+    "NOTION_DATABASE"
   ]
 }

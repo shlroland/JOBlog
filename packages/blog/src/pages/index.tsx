@@ -1,11 +1,14 @@
 import { type NextPage } from "next"
 import Link from "next/link"
+import { api } from "~/utils/api"
 
 import { ArticleList } from "../components/ArticleList"
 import { DoubleColumnLayout } from "../components/Layouts/DoubleColumnLayout"
 import { ArticleRecommend, Tags } from "../components/Recommends"
 
 const Home: NextPage = () => {
+  const { data } =  api.notion.queryDatabase.useQuery()
+console.log(data)
   return (
     <div className="flex h-full flex-col">
       <DoubleColumnLayout

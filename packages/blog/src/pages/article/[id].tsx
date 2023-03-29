@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { AiOutlineTag } from "react-icons/ai"
 
+
 import { DoubleColumnLayout } from "~/components/Layouts/DoubleColumnLayout"
 import { LocaleTime } from "~/components/LocaleTime"
 import { MarkdownRender } from "~/components/MarkdownRender"
@@ -79,4 +80,3 @@ const Article: NextPage<{ article: string }> = () => {
 }
 
 export default Article
-

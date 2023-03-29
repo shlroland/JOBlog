@@ -11,8 +11,10 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@notionhq/client": "^2.2.3",
     "@roland/auth": "*",
     "@roland/db": "*",
+    "@roland/env": "*",
     "@trpc/client": "^10.14.0",
     "@trpc/server": "^10.14.0",
     "superjson": "1.9.1",

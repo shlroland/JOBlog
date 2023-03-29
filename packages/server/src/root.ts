@@ -1,4 +1,5 @@
 import { exampleRouter } from "./routers/example"
+import { notionRouter } from "./routers/notion"
 import { createTRPCRouter } from "./trpc"
 
 /**
@@ -8,6 +9,7 @@ import { createTRPCRouter } from "./trpc"
  */
 export const appRouter = createTRPCRouter({
   example: exampleRouter,
+  notion: notionRouter,
 })
 
 // export type definition of API
